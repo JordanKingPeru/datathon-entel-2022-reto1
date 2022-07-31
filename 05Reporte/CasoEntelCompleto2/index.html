@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>RiskLab</title>
+        <link rel="stylesheet" href="./metadata/src/css/style.css">
+        <link rel="stylesheet" href="./metadata/src/css/main.css">
+        <link rel="icon" href="./metadata/src/img/favicon.ico" type="image/x-icon"/>
+    		<link rel="shortcut icon" href="./metadata/src/img/favicon.ico" type="image/x-icon"/>
+    </head>
+    <body>
+    	<div class="wrapper">
+    	 	<div id="particles">
+          <div id="particles-js">
+            <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;"></canvas>
+          </div>
+        </div>
+
+    		<nav id="sidebar" stylea="will-change: transform;">
+          <div style=""><button type="button" id="sidebarCollapse" class="icon_left"><span></span></button></div>
+    			<div class="sidebar-header"><a id="sidebar_logo" href="#frontpage"><img style="width:85%;" src="./metadata/src/img/RiskLab.png"/></a></div>
+    			<ul class="list-scrollable-1" id="toc">
+            <!-- ... CONTENT LIST .... -->
+          </ul>
+    		</nav>
+
+    		<div id="content" stylea="will-change: transform;">
+    	        <div id="main_content">
+    		        <div id="frontpage">
+    		         	<img style="padding: 15px 15px 0px 0px;float: right;width: 155px;" src='./metadata/src/img/BP_logo_right.svg'/>
+    		         	<img style="position:absolute;bottom:10px;right:35px;width:100px;" src='./metadata/src/img/trusted_dark.png'/>
+    		         	<div id="frontpage_title"></div>
+    		        </div>
+
+                <div id="modal_div" class="modal" tabindex="-1">
+                <div class="aspectRatioSizer">
+                  <div id="a3" class="modal_box">
+                    <div class="modal_utils">
+                    	<span id="modal_close"></span>
+                    </div>
+                    <div class="modal_main_contents">
+                      <div id="a1" class="modal_nav_panel"></div>
+                      <div id="a2" class="modal_contents"></div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+                <div class="cont_item" id="loading" style="z-index: -1;left: 0px;top: 0px;position: absolute;width: calc(100% - 40px);display:block;opacity:0;">
+                  <div style="position: absolute;top: calc(50% - 32px);left: calc(50% - 32px);"><div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div><div>Loading...</div></div>
+                </div>
+                <!-- ... CONTENTS .... -->
+    	        </div>
+    		</div>
+
+    	</div>
+
+
+
+
+      <svg height="5" width="5" xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs><pattern id="texture-1" patternUnits="userSpaceOnUse" width="5" height="5">
+          <image xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc1JyBoZWlnaHQ9JzUnPgogIDxyZWN0IHdpZHRoPSc1JyBoZWlnaHQ9JzUnIGZpbGw9J3doaXRlJy8+CiAgPHBhdGggZD0nTTAgNUw1IDBaTTYgNEw0IDZaTS0xIDFMMSAtMVonIHN0cm9rZT0nIzg4OCcgc3Ryb2tlLXdpZHRoPScxJy8+Cjwvc3ZnPg==" x="0" y="0" width="5" height="5" opacity="0.16">
+          </image>
+        </pattern></defs>
+      </svg>
+
+      <script src="./metadata/src/js/jquery-3.3.1.min.js"></script>
+      <script src="./metadata/src/js/particles.js"></script>
+      <script src="./metadata/contents.json"></script>
+
+      <script src="./metadata/src/js/main.js"></script>
+      <script src="./metadata/src/js/preprocessing.js"></script>
+      <script src="./metadata/src/js/univariate.js"></script>
+      <script src="./metadata/src/js/bivariate.js"></script>
+      <script src="./metadata/src/js/bivariatecontinuous.js"></script>
+      <script src="./metadata/src/js/optimalgrouping.js"></script>
+      <script src="./metadata/src/js/modelgenerator.js"></script>
+      <script src="./metadata/src/js/modeloptimizer.js"></script>
+      <script src="./metadata/src/js/modelanalyzer.js"></script>
+      
+      <script src="./metadata/data.json"></script>
+      <script defer async src="./metadata/src/js/jquery.dataTables.js"></script>
+      <script defer async src="./metadata/src/js/dataTables.scroller.js"></script>
+      <script defer async src="./metadata/src/js/dataTables.buttons.js"></script>
+      <script defer async src="./metadata/src/js/buttons.html5.js"></script>
+      <script defer src="./metadata/src/js/echarts.js"></script>
+    </body>
+</html>
