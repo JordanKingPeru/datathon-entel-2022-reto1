@@ -1,0 +1,13 @@
+var report_info = '{"title1":"Reporte Detallado","title2":"Se presenta los resultados ","title3":"30 julio 2022"}';
+var user_info = '{"value_hosts":null,"uuaa_code":null,"datetime":"2022-07-30 22:12:47.633957"}';
+var json_items = new Array();
+json_items.push('{"item_id":"0001","item_info":0,"step_id":"00","title":"Univariate Analysis","type":"univariate"}');
+json_items.push('{"item_id":"0001","step_id":"01","title":"Run","type":"run"}');
+json_items.push('{"item_id":"0002","item_info":0,"step_id":"00","title":"Bivariate Analysis","type":"bivariate"}');
+json_items.push('{"item_id":"0002","step_id":"01","title":"Run","type":"run"}');
+json_items.push('{"item_id":"0003","item_info":0,"step_id":"00","title":"Model Analysis","type":"modelanalyzer"}');
+json_items.push('{"item_id":"0004","item_info":0,"step_id":"00","title":"Model Analysis","type":"modelanalyzer"}');
+json_items.push('{"item_id":"0005","item_info":0,"step_id":"00","title":"Model Analysis","type":"modelanalyzer"}');
+json_items.push('{"item_id":"0006","item_info":0,"step_id":"00","title":"Model Analysis","type":"modelanalyzer"}');
+json_items.push('{"item_id":"0007","item_info":0,"step_id":"00","title":"Model Analysis","type":"modelanalyzer"}');
+json_items.push('{"item_id":"0008","item_info":0,"step_id":"00","title":"Model Analysis","type":"modelanalyzer"}');
