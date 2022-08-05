@@ -1,0 +1,213 @@
+{
+  "version": "1.0.0",
+  "cells": [
+    {
+      "type": "cs",
+      "input": "assist"
+    },
+    {
+      "type": "cs",
+      "input": "importFiles"
+    },
+    {
+      "type": "cs",
+      "input": "setupParse source_frames: [ \"dfmodel.parquet\"]"
+    },
+    {
+      "type": "cs",
+      "input": "parseFiles\n  source_frames: [\"dfmodel.parquet\"]\n  destination_frame: \"Key_Frame__dfmodel_parquet.hex\"\n  parse_type: \"PARQUET\"\n  separator: 124\n  number_columns: 42\n  single_quotes: true\n  column_names: [\"periodo\",\"fecingresocliente\",\"nro_documento_hash\",\"nro_telefono_hash\",\"fecactivacioncontrato\",\"tipo_adq\",\"antiguedad_cliente\",\"antiguedad_contrato\",\"antiguedad_cliente_contrato\",\"vchmesadenda\",\"vchpenalidad\",\"con_adenda\",\"grupo\",\"scorecat\",\"grupo_1\",\"grupo_2\",\"grupo_3\",\"grupo_4\",\"grupo_5\",\"grupo_6\",\"grupo_7\",\"grupo_8\",\"grupo_9\",\"grupo_10\",\"grupo_11\",\"cant_grupos\",\"fechatraficomin\",\"fechatraficomax\",\"tiposerviciocount\",\"minutossum\",\"minutosmean\",\"minutosstd\",\"mensajessum\",\"mensajesmean\",\"mensajesstd\",\"gigassum\",\"gigasmean\",\"gigasstd\",\"max_tiempo_interaccion\",\"tiposervicio\",\"target\",\"__index_level_0__\"]\n  column_types: [\"Numeric\",\"Numeric\",\"Enum\",\"String\",\"Numeric\",\"Enum\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Enum\",\"Enum\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Enum\",\"Numeric\",\"Numeric\"]\n  delete_on_done: true\n  check_header: 1\n  chunk_size: 4194304\n  escapechar: undefined"
+    },
+    {
+      "type": "cs",
+      "input": "parseFiles\n  source_frames: [\"dfmodel.parquet\"]\n  destination_frame: \"Key_Frame__dfmodel_parquet.hex\"\n  parse_type: \"PARQUET\"\n  separator: 124\n  number_columns: 42\n  single_quotes: true\n  column_names: [\"periodo\",\"fecingresocliente\",\"nro_documento_hash\",\"nro_telefono_hash\",\"fecactivacioncontrato\",\"tipo_adq\",\"antiguedad_cliente\",\"antiguedad_contrato\",\"antiguedad_cliente_contrato\",\"vchmesadenda\",\"vchpenalidad\",\"con_adenda\",\"grupo\",\"scorecat\",\"grupo_1\",\"grupo_2\",\"grupo_3\",\"grupo_4\",\"grupo_5\",\"grupo_6\",\"grupo_7\",\"grupo_8\",\"grupo_9\",\"grupo_10\",\"grupo_11\",\"cant_grupos\",\"fechatraficomin\",\"fechatraficomax\",\"tiposerviciocount\",\"minutossum\",\"minutosmean\",\"minutosstd\",\"mensajessum\",\"mensajesmean\",\"mensajesstd\",\"gigassum\",\"gigasmean\",\"gigasstd\",\"max_tiempo_interaccion\",\"tiposervicio\",\"target\",\"__index_level_0__\"]\n  column_types: [\"Numeric\",\"Numeric\",\"Enum\",\"String\",\"Numeric\",\"Enum\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Enum\",\"Enum\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Enum\",\"Numeric\",\"Numeric\"]\n  delete_on_done: true\n  check_header: 1\n  chunk_size: 4194304\n  escapechar: undefined"
+    },
+    {
+      "type": "cs",
+      "input": "getFrameSummary \"Key_Frame__dfmodel_parquet.hex\""
+    },
+    {
+      "type": "cs",
+      "input": "setupParse source_frames: [ \"dfmodel_woe.parquet\"]"
+    },
+    {
+      "type": "cs",
+      "input": "parseFiles\n  source_frames: [\"dfmodel_woe.parquet\"]\n  destination_frame: \"Key_Frame__dfmodel_woe_parquet.hex\"\n  parse_type: \"PARQUET\"\n  separator: 124\n  number_columns: 34\n  single_quotes: true\n  column_names: [\"nro_documento_hash\",\"nro_telefono_hash\",\"periodo\",\"tipo_adq\",\"antiguedad_cliente\",\"antiguedad_contrato\",\"antiguedad_cliente_contrato\",\"vchmesadenda\",\"vchpenalidad\",\"con_adenda\",\"grupo\",\"scorecat\",\"grupo_1\",\"grupo_2\",\"grupo_3\",\"grupo_4\",\"grupo_5\",\"grupo_6\",\"grupo_7\",\"grupo_8\",\"grupo_9\",\"grupo_10\",\"grupo_11\",\"cant_grupos\",\"tiposerviciocount\",\"minutossum\",\"minutosmean\",\"mensajessum\",\"gigassum\",\"gigasmean\",\"gigasstd\",\"max_tiempo_interaccion\",\"tiposervicio\",\"target\"]\n  column_types: [\"Enum\",\"String\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\"]\n  delete_on_done: true\n  check_header: 1\n  chunk_size: 4194304\n  escapechar: undefined"
+    },
+    {
+      "type": "cs",
+      "input": "getFrameSummary \"Key_Frame__dfmodel_woe_parquet.hex\""
+    },
+    {
+      "type": "cs",
+      "input": "assist splitFrame, \"Key_Frame__dfmodel_woe_parquet.hex\""
+    },
+    {
+      "type": "cs",
+      "input": "splitFrame \"Key_Frame__dfmodel_woe_parquet.hex\", [0.75], [\"frame_0.750\",\"frame_0.250\"], 17759"
+    },
+    {
+      "type": "cs",
+      "input": "getFrameSummary \"frame_0.750\""
+    },
+    {
+      "type": "cs",
+      "input": "assist splitFrame, \"frame_0.750\""
+    },
+    {
+      "type": "cs",
+      "input": "splitFrame \"frame_0.750\", [0.75], [\"frame_0.750_train\",\"frame_0.750_valid\"], 834588"
+    },
+    {
+      "type": "cs",
+      "input": "getFrameSummary \"frame_0.750_train\""
+    },
+    {
+      "type": "cs",
+      "input": ""
+    },
+    {
+      "type": "cs",
+      "input": "setupParse source_frames: [ \"dfmodel_woe_leaderboard.parquet\"]"
+    },
+    {
+      "type": "cs",
+      "input": "parseFiles\n  source_frames: [\"dfmodel_woe_leaderboard.parquet\"]\n  destination_frame: \"Key_Frame__dfmodel_woe_leaderboard_parquet.hex\"\n  parse_type: \"PARQUET\"\n  separator: 124\n  number_columns: 34\n  single_quotes: true\n  column_names: [\"nro_documento_hash\",\"nro_telefono_hash\",\"periodo\",\"tipo_adq\",\"antiguedad_cliente\",\"antiguedad_contrato\",\"antiguedad_cliente_contrato\",\"vchmesadenda\",\"vchpenalidad\",\"con_adenda\",\"grupo\",\"scorecat\",\"grupo_1\",\"grupo_2\",\"grupo_3\",\"grupo_4\",\"grupo_5\",\"grupo_6\",\"grupo_7\",\"grupo_8\",\"grupo_9\",\"grupo_10\",\"grupo_11\",\"cant_grupos\",\"tiposerviciocount\",\"minutossum\",\"minutosmean\",\"mensajessum\",\"gigassum\",\"gigasmean\",\"gigasstd\",\"max_tiempo_interaccion\",\"tiposervicio\",\"target\"]\n  column_types: [\"Enum\",\"String\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\"]\n  delete_on_done: true\n  check_header: 1\n  chunk_size: 4194304\n  escapechar: undefined"
+    },
+    {
+      "type": "cs",
+      "input": "getFrameSummary \"Key_Frame__dfmodel_woe_leaderboard_parquet.hex\""
+    },
+    {
+      "type": "cs",
+      "input": "assist buildModel, null, training_frame: \"frame_0.750\""
+    },
+    {
+      "type": "cs",
+      "input": "buildModel 'drf', {\"model_id\":\"drf-1979f478-5049-42e5-9a02-ce2be2f4feca\",\"training_frame\":\"frame_0.750\",\"validation_frame\":\"frame_0.250\",\"nfolds\":5,\"response_column\":\"target\",\"ignored_columns\":[\"nro_documento_hash\",\"nro_telefono_hash\",\"periodo\"],\"ignore_const_cols\":true,\"ntrees\":50,\"max_depth\":20,\"min_rows\":1,\"nbins\":20,\"seed\":2106,\"mtries\":-1,\"sample_rate\":0.632,\"score_each_iteration\":true,\"score_tree_interval\":0,\"fold_assignment\":\"AUTO\",\"nbins_top_level\":1024,\"nbins_cats\":1024,\"r2_stopping\":1.7976931348623157e+308,\"stopping_rounds\":0,\"stopping_metric\":\"AUTO\",\"stopping_tolerance\":0.001,\"max_runtime_secs\":0,\"col_sample_rate_per_tree\":1,\"min_split_improvement\":0.00001,\"histogram_type\":\"AUTO\",\"categorical_encoding\":\"AUTO\",\"distribution\":\"AUTO\",\"gainslift_bins\":-1,\"auc_type\":\"AUTO\",\"keep_cross_validation_models\":true,\"keep_cross_validation_predictions\":false,\"keep_cross_validation_fold_assignment\":false,\"build_tree_one_node\":false,\"sample_rate_per_class\":[],\"binomial_double_trees\":false,\"col_sample_rate_change_per_level\":1,\"calibrate_model\":false,\"check_constant_response\":true}"
+    },
+    {
+      "type": "cs",
+      "input": "getModel \"drf-1979f478-5049-42e5-9a02-ce2be2f4feca\""
+    },
+    {
+      "type": "cs",
+      "input": "predict model: \"drf-1979f478-5049-42e5-9a02-ce2be2f4feca\""
+    },
+    {
+      "type": "cs",
+      "input": "predict model: \"drf-1979f478-5049-42e5-9a02-ce2be2f4feca\", frame: \"Key_Frame__dfmodel_woe_leaderboard_parquet.hex\", predictions_frame: \"df_model_prediction-a0656dca-db63-4f89-a980-6bc630bfab95\""
+    },
+    {
+      "type": "cs",
+      "input": "getFrameSummary \"df_model_prediction-a0656dca-db63-4f89-a980-6bc630bfab95\""
+    },
+    {
+      "type": "cs",
+      "input": "getFrameData \"df_model_prediction-a0656dca-db63-4f89-a980-6bc630bfab95\""
+    },
+    {
+      "type": "cs",
+      "input": "buildModel 'gbm', {\"model_id\":\"gbm-7681d486-737e-4c15-9edf-2c9ee5659a86\",\"training_frame\":\"frame_0.750\",\"validation_frame\":\"frame_0.250\",\"nfolds\":10,\"response_column\":\"target\",\"ignored_columns\":[\"nro_documento_hash\",\"nro_telefono_hash\",\"periodo\"],\"ignore_const_cols\":true,\"ntrees\":50,\"max_depth\":5,\"min_rows\":10,\"nbins\":20,\"seed\":2106,\"learn_rate\":0.1,\"sample_rate\":1,\"col_sample_rate\":1,\"score_each_iteration\":false,\"score_tree_interval\":0,\"fold_assignment\":\"AUTO\",\"nbins_top_level\":1024,\"nbins_cats\":1024,\"r2_stopping\":1.7976931348623157e+308,\"stopping_rounds\":0,\"stopping_metric\":\"AUTO\",\"stopping_tolerance\":0.001,\"max_runtime_secs\":0,\"learn_rate_annealing\":1,\"distribution\":\"AUTO\",\"huber_alpha\":0.9,\"col_sample_rate_per_tree\":1,\"min_split_improvement\":0.00001,\"histogram_type\":\"AUTO\",\"categorical_encoding\":\"AUTO\",\"monotone_constraints\":[],\"gainslift_bins\":-1,\"auc_type\":\"AUTO\",\"keep_cross_validation_models\":true,\"keep_cross_validation_predictions\":false,\"keep_cross_validation_fold_assignment\":false,\"build_tree_one_node\":false,\"sample_rate_per_class\":[],\"col_sample_rate_change_per_level\":1,\"max_abs_leafnode_pred\":1.7976931348623157e+308,\"pred_noise_bandwidth\":0,\"calibrate_model\":false,\"check_constant_response\":true}"
+    },
+    {
+      "type": "cs",
+      "input": "getModel \"gbm-7681d486-737e-4c15-9edf-2c9ee5659a86\""
+    },
+    {
+      "type": "cs",
+      "input": "predict model: \"gbm-7681d486-737e-4c15-9edf-2c9ee5659a86\""
+    },
+    {
+      "type": "cs",
+      "input": "predict model: \"gbm-7681d486-737e-4c15-9edf-2c9ee5659a86\", frame: \"Key_Frame__dfmodel_woe_leaderboard_parquet.hex\", predictions_frame: \"prediction-b39f2686-af7c-4322-b6b9-0afda85230f3\""
+    },
+    {
+      "type": "cs",
+      "input": "getFrameSummary \"prediction-b39f2686-af7c-4322-b6b9-0afda85230f3\""
+    },
+    {
+      "type": "cs",
+      "input": "buildModel \"deeplearning\""
+    },
+    {
+      "type": "cs",
+      "input": "buildModel 'deeplearning', {\"model_id\":\"deeplearning-8d77c367-90a7-4e90-a119-8c70836c60b2\",\"training_frame\":\"frame_0.750\",\"validation_frame\":\"frame_0.250\",\"nfolds\":10,\"response_column\":\"target\",\"ignored_columns\":[\"nro_documento_hash\",\"nro_telefono_hash\",\"periodo\"],\"ignore_const_cols\":true,\"activation\":\"Rectifier\",\"hidden\":[200,200],\"epochs\":10,\"variable_importances\":true,\"fold_assignment\":\"AUTO\",\"score_each_iteration\":false,\"use_all_factor_levels\":true,\"standardize\":true,\"train_samples_per_iteration\":-2,\"adaptive_rate\":true,\"input_dropout_ratio\":0,\"l1\":0,\"l2\":0,\"loss\":\"Automatic\",\"distribution\":\"AUTO\",\"huber_alpha\":0.9,\"score_interval\":5,\"score_training_samples\":10000,\"score_validation_samples\":0,\"score_duty_cycle\":0.1,\"stopping_rounds\":5,\"stopping_metric\":\"AUTO\",\"stopping_tolerance\":0,\"max_runtime_secs\":0,\"autoencoder\":false,\"categorical_encoding\":\"AUTO\",\"auc_type\":\"AUTO\",\"keep_cross_validation_models\":true,\"keep_cross_validation_predictions\":false,\"keep_cross_validation_fold_assignment\":false,\"target_ratio_comm_to_comp\":0.05,\"seed\":2106,\"rho\":0.99,\"epsilon\":1e-8,\"nesterov_accelerated_gradient\":true,\"max_w2\":3.4028235e+38,\"initial_weight_distribution\":\"UniformAdaptive\",\"regression_stop\":0.000001,\"diagnostics\":true,\"fast_mode\":true,\"force_load_balance\":true,\"single_node_mode\":false,\"shuffle_training_data\":false,\"missing_values_handling\":\"MeanImputation\",\"quiet_mode\":false,\"sparse\":false,\"col_major\":false,\"average_activation\":0,\"sparsity_beta\":0,\"max_categorical_features\":2147483647,\"reproducible\":false,\"export_weights_and_biases\":true,\"mini_batch_size\":1,\"elastic_averaging\":false}"
+    },
+    {
+      "type": "cs",
+      "input": "getModel \"deeplearning-8d77c367-90a7-4e90-a119-8c70836c60b2\""
+    },
+    {
+      "type": "cs",
+      "input": "predict model: \"deeplearning-8d77c367-90a7-4e90-a119-8c70836c60b2\""
+    },
+    {
+      "type": "cs",
+      "input": "predict model: \"deeplearning-8d77c367-90a7-4e90-a119-8c70836c60b2\", frame: \"Key_Frame__dfmodel_woe_leaderboard_parquet.hex\", predictions_frame: \"prediction-537c3e66-65ab-4d19-a10b-34a97195b10a\""
+    },
+    {
+      "type": "cs",
+      "input": "getFrameSummary \"prediction-537c3e66-65ab-4d19-a10b-34a97195b10a\""
+    },
+    {
+      "type": "cs",
+      "input": "setupParse source_frames: [ \"dfmodel_woe_leaderboard.parquet\"]"
+    },
+    {
+      "type": "cs",
+      "input": "parseFiles\n  source_frames: [\"dfmodel_woe_leaderboard.parquet\"]\n  destination_frame: \"Key_Frame__dfmodel_woe_leaderboard_completo.hex\"\n  parse_type: \"PARQUET\"\n  separator: 124\n  number_columns: 57\n  single_quotes: true\n  column_names: [\"nro_documento_hash\",\"nro_telefono_hash\",\"periodo\",\"tipo_adq\",\"antiguedad_cliente\",\"antiguedad_contrato\",\"antiguedad_cliente_contrato\",\"vchmesadenda\",\"vchpenalidad\",\"con_adenda\",\"grupo\",\"scorecat\",\"grupo_1\",\"grupo_2\",\"grupo_3\",\"grupo_4\",\"grupo_5\",\"grupo_6\",\"grupo_7\",\"grupo_8\",\"grupo_9\",\"grupo_10\",\"grupo_11\",\"cant_grupos\",\"tiposerviciocount\",\"minutossum\",\"minutosmean\",\"mensajessum\",\"gigassum\",\"gigasmean\",\"gigasstd\",\"max_tiempo_interaccion\",\"tiposervicio\",\"marca\",\"modelo\",\"nueva_gamma\",\"os\",\"device_type\",\"antiguedad_lanzamiento\",\"mins_flujo_1\",\"mins_flujo_2\",\"trafico_app_1\",\"trafico_app_2\",\"trafico_app_3\",\"trafico_app_4\",\"trafico_app_5\",\"trafico_app_6\",\"trafico_app_7\",\"trafico_app_8\",\"trafico_app_9\",\"trafico_total\",\"giro\",\"subgiro\",\"tiene_prod_1\",\"tiene_prod_2\",\"tiene_prod_3\",\"target\"]\n  column_types: [\"Enum\",\"String\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\"]\n  delete_on_done: true\n  check_header: 1\n  chunk_size: 4194304\n  escapechar: undefined"
+    },
+    {
+      "type": "cs",
+      "input": "getFrameSummary \"Key_Frame__dfmodel_woe_leaderboard_completo.hex\""
+    },
+    {
+      "type": "cs",
+      "input": "assist splitFrame, \"Key_Frame__dfmodel_woe_leaderboard_completo.hex\""
+    },
+    {
+      "type": "cs",
+      "input": "splitFrame \"Key_Frame__dfmodel_woe_leaderboard_completo.hex\", [0.75], [\"completo_frame_0.750\",\"completo_frame_0.250\"], 210406"
+    },
+    {
+      "type": "cs",
+      "input": "getFrameSummary \"completo_frame_0.750\""
+    },
+    {
+      "type": "cs",
+      "input": "assist runAutoML, training_frame: \"completo_frame_0.750\""
+    },
+    {
+      "type": "cs",
+      "input": "runAutoML {\"build_control\":{\"project_name\":\"Entel Model\",\"distribution\":\"AUTO\",\"nfolds\":-1,\"balance_classes\":true,\"stopping_criteria\":{\"seed\":2106,\"max_models\":0,\"max_runtime_secs\":0,\"max_runtime_secs_per_model\":0,\"stopping_rounds\":3,\"stopping_metric\":\"AUTO\",\"stopping_tolerance\":-1},\"class_sampling_factors\":[],\"max_after_balance_size\":5,\"keep_cross_validation_predictions\":true,\"keep_cross_validation_models\":true,\"keep_cross_validation_fold_assignment\":false},\"input_spec\":{\"training_frame\":\"completo_frame_0.750\",\"response_column\":\"target\",\"validation_frame\":\"completo_frame_0.750\",\"ignored_columns\":[\"nro_documento_hash\",\"nro_telefono_hash\"],\"sort_metric\":\"AUTO\"},\"build_models\":{\"exclude_algos\":[],\"exploitation_ratio\":-1,\"monotone_constraints\":[]}}, 'exec'"
+    },
+    {
+      "type": "cs",
+      "input": "getLeaderboard \"Entel Model@@target\""
+    },
+    {
+      "type": "cs",
+      "input": "getModel \"StackedEnsemble_AllModels_2_AutoML_3_20220731_162018\""
+    },
+    {
+      "type": "cs",
+      "input": "setupParse source_frames: [ \"dfmodel_woe_leaderboard_202204.parquet\"]"
+    },
+    {
+      "type": "cs",
+      "input": "parseFiles\n  source_frames: [\"dfmodel_woe_leaderboard_202204.parquet\"]\n  destination_frame: \"Key_Frame__dfmodel_woe_leaderboard_202204_parquet.hex\"\n  parse_type: \"PARQUET\"\n  separator: 124\n  number_columns: 58\n  single_quotes: true\n  column_names: [\"nro_documento_hash\",\"nro_telefono_hash\",\"periodo\",\"tipo_adq\",\"antiguedad_cliente\",\"antiguedad_contrato\",\"antiguedad_cliente_contrato\",\"vchmesadenda\",\"vchpenalidad\",\"con_adenda\",\"grupo\",\"scorecat\",\"grupo_1\",\"grupo_2\",\"grupo_3\",\"grupo_4\",\"grupo_5\",\"grupo_6\",\"grupo_7\",\"grupo_8\",\"grupo_9\",\"grupo_10\",\"grupo_11\",\"cant_grupos\",\"tiposerviciocount\",\"minutossum\",\"minutosmean\",\"mensajessum\",\"gigassum\",\"gigasmean\",\"gigasstd\",\"max_tiempo_interaccion\",\"tiposervicio\",\"marca\",\"modelo\",\"nueva_gamma\",\"lanzamiento\",\"os\",\"device_type\",\"antiguedad_lanzamiento\",\"mins_flujo_1\",\"mins_flujo_2\",\"trafico_app_1\",\"trafico_app_2\",\"trafico_app_3\",\"trafico_app_4\",\"trafico_app_5\",\"trafico_app_6\",\"trafico_app_7\",\"trafico_app_8\",\"trafico_app_9\",\"trafico_total\",\"giro\",\"subgiro\",\"tiene_prod_1\",\"tiene_prod_2\",\"tiene_prod_3\",\"target\"]\n  column_types: [\"Enum\",\"String\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\"]\n  delete_on_done: true\n  check_header: 1\n  chunk_size: 4194304\n  escapechar: undefined"
+    },
+    {
+      "type": "cs",
+      "input": "predict model: \"StackedEnsemble_AllModels_2_AutoML_3_20220731_162018\""
+    },
+    {
+      "type": "cs",
+      "input": "predict model: \"StackedEnsemble_AllModels_2_AutoML_3_20220731_162018\", frame: \"Key_Frame__dfmodel_woe_leaderboard_202204_parquet.hex\", predictions_frame: \"prediction-c670fd44-8508-4208-9708-570a9785427a\""
+    },
+    {
+      "type": "cs",
+      "input": "getFrameSummary \"prediction-c670fd44-8508-4208-9708-570a9785427a\""
+    }
+  ]
+}
